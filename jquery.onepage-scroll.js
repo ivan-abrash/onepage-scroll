@@ -248,7 +248,11 @@
       }).addClass("section").attr("data-index", i+1);
       topPos = topPos + 100;
       if(settings.pagination == true) {
-        paginationList += "<li><a data-index='"+(i+1)+"' href='#" + (i+1) + "'></a></li>"
+      	//it might be useful to add classes to pagination li or a to be able to style it depending on the pages they are linked to
+      	//and there's probably a better way to do it
+        //paginationList += "<li><a data-index='"+(i+1)+"' href='#" + (i+1) + "'></a></li>"
+        paginationList += '<li><a class="page'+(i+1)+'" data-index="'+(i+1)+'" href="#'+ (i+1)+'"></a></li>'
+        
       }
     });
     
